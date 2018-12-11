@@ -1,3 +1,24 @@
+# Table of Contents
+
+* [Spring-Cloud-Contract 演示项目](#spring-cloud-contract-演示项目)
+  * [一. 简述](#一-简述)
+  * [二. 搭建一个环境](#二-搭建一个环境)
+    * [2.1 订单服务](#21-订单服务)
+    * [2.2 产品服务](#22-产品服务)
+    * [2.3 请求订单接口](#23-请求订单接口)
+  * [三. 生产者提供`contract`包](#三-生产者提供`contract`包)
+    * [3.1 引入相关包](#31-引入相关包)
+    * [3.1 编写 `Contract`](#31-编写-`contract`)
+    * [3.2 生成桩](#32-生成桩)
+  * [四. 消费者使用`contract`包](#四-消费者使用`contract`包)
+    * [4.1 引入相关包](#41-引入相关包)
+    * [4.2 编写测试类](#42-编写测试类)
+    * [4.3 配置服务名称](#43-配置服务名称)
+    * [4.4 运行测试](#44-运行测试)
+  * [参考资料](#参考资料)
+
+
+
 # Spring-Cloud-Contract 演示项目
 
 🤡用于演示如何使用 `Spring-Cloud-Contract` 进行离线测试
@@ -130,7 +151,7 @@ Date: Tue, 11 Dec 2018 02:41:59 GMT
 }
 ```
 
-## 三. 生产者（即 `product-server` ）提供 `contract` 包
+## 三. 生产者提供`contract`包
 
 ### 3.1 引入相关包
 
@@ -211,9 +232,9 @@ OK，已经将 `product-server` 的桩打进 `maven` 仓库了，现在可以在
 
 
 
-## 四. 消费者使用 `contract` 包
+## 四. 消费者使用`contract`包
 
-### 3.1 引入相关包
+### 4.1 引入相关包
 
 ```xml
 <!-- SpringBoot 测试 -->
@@ -230,7 +251,7 @@ OK，已经将 `product-server` 的桩打进 `maven` 仓库了，现在可以在
 </dependency>
 ```
 
-### 3.2 编写测试类
+### 4.2 编写测试类
 
 这里跟参考资料作者写的就有点区别了，可能是因为升级了版本 `@AutoConfigureStubRunner` 的 `stubsMode` 属性已经取消了。
 
@@ -284,7 +305,7 @@ public class OrderEndpointTest {
 
 ```
 
-### 3.3 配置服务名称
+### 4.3 配置服务名称
 
 我已经顺便把测试的时候把 `eureka` 的链接关闭了。
 
@@ -304,7 +325,7 @@ stubrunner:
     product-server: product-server
 ```
 
-### 3.4 运行测试
+### 4.4 运行测试
 
 ![](./_imgs/testresult.png)
 
