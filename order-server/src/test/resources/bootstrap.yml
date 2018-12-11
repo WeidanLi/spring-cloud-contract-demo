@@ -1,0 +1,11 @@
+eureka:
+  client:
+    enabled: false
+server:
+  port: 8082
+spring:
+  application:
+    name: order-server
+stubrunner:
+  idsToServiceIds:
+    product-server: product-server
