@@ -337,7 +337,7 @@ OK，单机测试可以用过了。
 
 ## 参考资料
 
-[[基于Feign的微服务调用之契约测试 Spring Cloud Contract](https://segmentfault.com/a/1190000015555626)](https://segmentfault.com/a/1190000015555626?utm_source=tag-newest#articleHeader0)
+[基于Feign的微服务调用之契约测试 Spring Cloud Contract](https://segmentfault.com/a/1190000015555626)
 
 [Contract-dsl](https://cloud.spring.io/spring-cloud-contract/single/spring-cloud-contract.html#contract-dsl)
 
