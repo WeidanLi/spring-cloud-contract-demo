@@ -319,7 +319,7 @@ spring:
   application:
     name: order-server
 stubrunner:
-  idsToServiceIds: # 用于指定 feign 名字对应的 stubs 包。前面是 feign 名字，后面是 stubs 包的 artifactId
+  idsToServiceIds: # 用于指定 feign 名字对应的 stubs 包。前面是 stubs 包的 artifactId，后面是 feign 名字
     product-server: product-server
 ```
 
